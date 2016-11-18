@@ -9,17 +9,12 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1>Your Address Book</h1>
+      <h1>Sorry There were no Contacts that Matched that Search.</h1>
     </div>
-    <h3>Here are the Contacts currently in your address book: </h3>
-        @foreach(var contact in Model)
-        {
-          <p><a href="/contact/@contact.GetId()">@contact.GetContactName()</a></p>
-        }
-    <p>
+    <div class="footer">
       <button type="button"><a href="/contact/new">Add a new Contact </a></button> |
       <button type="button"><a href="/contact/contact_search">Search Your Contacts </a></button> |
-      <button type="button"><a href="/contact/clear">Delete Your Contacts</a></button>
-    </p>
+      <button type="button"><a href="/">View All Contacts</a></button>
+    </div>
   </body>
 </html>

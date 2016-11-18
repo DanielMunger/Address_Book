@@ -66,7 +66,7 @@ namespace AddressBook.Objects
       List<int> result = new List<int>{};
       foreach(Contact contact in _instances)
       {
-        if(contact.GetContactName() == SearchContact)
+        if(contact.GetContactName().Contains(SearchContact))
         {
           result.Add(contact._id);
         }
@@ -76,6 +76,7 @@ namespace AddressBook.Objects
     public static List<Contact> SearchContacts(string SearchContact)
     {
       SearchContact = SearchContact.ToLower();
+      
       List<Contact> foundContact = new List<Contact>{};
       foreach(Contact contact in _instances)
       {

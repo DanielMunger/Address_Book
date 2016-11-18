@@ -37,7 +37,7 @@ namespace AddressBook
         }
         else
         {
-          return View["index.cshtml", allContacts];
+          return View["no_contacts.cshtml"];
         }
       };
         Get["/contact/clear"] = _ => {
