@@ -28,10 +28,11 @@ namespace AddressBook
         Contact.ClearAll();
         return View["index.cshtml", allContacts];
       };
-      Get["/contact/{id}"] = parameters => {
+      Get["/deletecontact/{id}"] = parameters => {
         Contact contact = Contact.Find(parameters.id);
         Contact.DeleteContact(contact);
-        return View["index.cshtml", contact];
+        List<Contact> allContacts = Contact.GetAll();
+        return View["index.cshtml", allContacts];
       };
       Post["/contact"] = _ => {
         string newName = Request.Form["new_contact_name"];
