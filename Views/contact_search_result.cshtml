@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/content/css/styles.css"  type="text/css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h2>Address Book Index</h2>
+    </div>
+    @foreach(var contact in Model)
+    {
+      <p><a href="/contact/@contact.GetId()">@contact.GetContactName()</a></p>
+    }
+    <a href="/">View All Contacts</a>
+  </body>
+</html>

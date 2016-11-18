@@ -61,6 +61,33 @@ namespace AddressBook.Objects
     {
       return _id;
     }
+    public static List<int> ContactExists(string SearchContact)
+    {
+      List<int> result = new List<int>{};
+      foreach(Contact contact in _instances)
+      {
+        if(contact.GetContactName() == SearchContact)
+        {
+          result.Add(contact._id);
+        }
+      }
+      return result;
+    }
+    public static List<Contact> SearchContacts(string SearchContact)
+    {
+      SearchContact = SearchContact.ToLower();
+      List<Contact> foundContact = new List<Contact>{};
+      foreach(Contact contact in _instances)
+      {
+        string contactName = contact.GetContactName();
+        contactName = contactName.ToLower();
+        if(contactName.Contains(SearchContact))
+        {
+          foundContact.Add(contact);
+        }
+      }
+      return foundContact;
+    }
     public static void DeleteContact(Contact contact)
     {
       _instances.Remove(contact);

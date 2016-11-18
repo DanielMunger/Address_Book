@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/content/css/styles.css"  type="text/css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      Search Your Contacts
+    </div>
+      <form action="/contact/contact_search_form" method="post">
+        <label for="searched_contact">Contact Name: </label>
+        <input type="text" name="searched_contact" id="searched_contact" required="required" placeholder="Johnny Appleseed"></br>
+        </br>
+        <button type="submit" name="button">Search Contacts</button>
+      </form>
+  </body>
+</html>

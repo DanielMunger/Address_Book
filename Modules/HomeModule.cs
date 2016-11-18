@@ -23,6 +23,23 @@ namespace AddressBook
         Contact contact = Contact.Find(parameters.id);
         return View["contact.cshtml", contact];
       };
+      Get["/contact/contact_search"] = _ => {
+        return View["contact_search.cshtml"];
+      };
+      Post["/contact/contact_search_form"] = _ => {
+        string searchContact = Request.Form["searched_contact"];
+        List<Contact> allContacts = Contact.GetAll();
+        List<int> returnedContacts = Contact.ContactExists(searchContact);
+        if(returnedContacts.Count > 0)
+        {
+          List<Contact> foundContact = Contact.SearchContacts(searchContact);
+          return View["contact_search_result.cshtml", foundContact];
+        }
+        else
+        {
+          return View["index.cshtml", allContacts];
+        }
+      };
         Get["/contact/clear"] = _ => {
         List<Contact> allContacts = Contact.GetAll();
         Contact.ClearAll();
