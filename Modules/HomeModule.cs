@@ -1,7 +1,8 @@
 using Nancy;
 using System.Collections.Generic;
+using Contact.Objects;
 
-namespace EnterNamespaceHere //replace with your desired namespace
+namespace AddressBookS //replace with your desired namespace
 {
   public class HomeModule : NancyModule
   {
