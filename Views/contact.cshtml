@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/content/css/styles.css"  type="text/css">
+    <title></title>
+  </head>
+  <body>
+    <h2>@Model.GetContactName()</h2>
+      <p>Address: @Model.GetAddress()</p>
+      <p>Phone Number: @Model.GetPhoneNumber()</p>
+      <p>Email: @Model.GetEmail()</p>
+    <a href="/">View All Contacts</a>
+    <a href="/contact/@Model.GetId()">Delete This Contact</a>
+  </body>
+</html>

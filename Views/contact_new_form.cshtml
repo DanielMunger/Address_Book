@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/content/css/styles.css"  type="text/css">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h2>Create a New Contact</h2>
+    </div>
+    <form action="/contact" method="post">
+      <label for="new_contact_name">Contact Name: </label>
+      <input type="text" name="new_contact_name" id="new_contact_name" required="required" placeholder="Johnny Appleseed"></br>
+      </br>
+      <label for="new_phone_number">Contact Phone Number: </label>
+      <input type="text" name="new_phone_number" id="new_phone_number" required="required" placeholder="999-777-0101"></br>
+      </br>
+      <label for="new_email">Contact Email: </label>
+      <input type="text" name="new_email" id="new_email" required="required" placeholder="J0^^y@pplE@hotmail.com"></br>
+      </br>
+      <label for="new_address">Contact Address: </label>
+      <input type="text" name="new_address" id="new_address" required="required" placeholder="Closest Apple Tree"></br>
+      </br>
+      <button type="submit" name="button">Create New Contact</button>
+    </form>
+  </body>
+</html>

@@ -1,1 +1,26 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/content/css/styles.css"  type="text/css">
+    <title></title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Your Address Book</h1>
+    </div>
+    <h3>Here are the Contacts currently in your address book: </h3>
+        @foreach(var contact in Model)
+        {
+          <p><a href="/contact/@contact.GetId()">@contact.GetContactName()</a></p>
+        }
+      <p>
+        <a href="/contact/new">Add a new Contact</a>
+      </p>
+      <p>
+        <a href="/contact/clear">Delete Your Contacts</a>
+      </p>
+  </body>
+</html>
